@@ -7,39 +7,39 @@ public var MAXNAMELEN: Int32 {
     return Darwin.MAXNAMLEN
 }
     
-public var DT_UNKNOWN: Int {
+public var DT_UNKNOWN: Int32 {
         return Darwin.DT_UNKNOWN
 }
     
-public var DT_FIFO: Int {
+public var DT_FIFO: Int32 {
     return Darwin.DT_FIFO
 }
     
-public var DT_CHR: Int {
+public var DT_CHR: Int32 {
     return Darwin.DT_CHR
 }
     
-public var DT_DIR: Int {
+public var DT_DIR: Int32 {
     return Darwin.DT_CHR
 }
     
-public var DT_BLK: Int {
+public var DT_BLK: Int32 {
     return Darwin.DT_BLK
 }
     
-public var DT_REG: Int {
+public var DT_REG: Int32 {
     return Darwin.DT_REG
 }
     
-public var DT_LNK: Int {
+public var DT_LNK: Int32 {
     return Darwin.DT_LNK
 }
     
-public var DT_SOCK: Int {
+public var DT_SOCK: Int32 {
     return Darwin.DT_SOCK
 }
     
-public var DT_WHT: Int {
+public var DT_WHT: Int32 {
     return Darwin.DT_WHT
 }
 #else
@@ -51,39 +51,39 @@ public var MAXNAMELEN: Int32 {
     return Glibc.MAXNAMLEN
 }
 
-public var DT_UNKNOWN: Int32 {
+public var DT_UNKNOWN: Int {
     return Glibc.DT_UNKNOWN
 }
 
-public var DT_FIFO: Int32 {
+public var DT_FIFO: Int {
     return Glibc.DT_FIFO
 }
 
-public var DT_CHR: Int32 {
+public var DT_CHR: Int {
     return Glibc.DT_CHR
 }
 
-public var DT_DIR: Int32 {
+public var DT_DIR: Int {
     return Glibc.DT_CHR
 }
 
-public var DT_BLK: Int32 {
+public var DT_BLK: Int {
     return Glibc.DT_BLK
 }
 
-public var DT_REG: Int32 {
+public var DT_REG: Int {
     return Glibc.DT_REG
 }
 
-public var DT_LNK: Int32 {
+public var DT_LNK: Int {
     return Glibc.DT_LNK
 }
 
-public var DT_SOCK: Int32 {
+public var DT_SOCK: Int {
     return Glibc.DT_SOCK
 }
 
-public var DT_WHT: Int32 {
+public var DT_WHT: Int {
     return Glibc.DT_WHT
 }
 #endif
