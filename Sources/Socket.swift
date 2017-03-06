@@ -1693,155 +1693,119 @@
     
     public typealias sockaddr_storage = Glibc.sockaddr_storage
     
-    public var PF_UNSPEC: macro_int_t {
+    public var PF_UNSPEC: pf_family_t {
         return Glibc.PF_UNSPEC
     }
     
-    public var PF_LOCAL: macro_int_t {
+    public var PF_LOCAL: pf_family_t {
         return Glibc.PF_LOCAL
     }
     
-    public var PF_UNIX: macro_int_t {
+    public var PF_UNIX: pf_family_t {
         return Glibc.PF_UNIX
     }
     
-    public var PF_INET: macro_int_t {
+    public var PF_INET: pf_family_t {
         return Glibc.PF_INET
     }
     
-    public var PF_IMPLINK: macro_int_t {
-        return Glibc.PF_IMPLINK
-    }
-    
-    public var PF_PUP: macro_int_t {
-        return Glibc.PF_PUP
-    }
-    
-    public var PF_CHAOS: macro_int_t {
-        return Glibc.PF_CHAOS
-    }
-    
-    public var PF_NS: macro_int_t {
-        return Glibc.PF_NS
-    }
-    
-    public var PF_ISO: macro_int_t {
-        return Glibc.PF_ISO
-    }
-    
-    public var PF_OSI: macro_int_t {
-        return Glibc.PF_OSI
-    }
-    
-    public var PF_ECMA: macro_int_t {
-        return Glibc.PF_ECMA
-    }
-    
-    public var PF_DATAKIT: macro_int_t {
-        return Glibc.PF_DATAKIT
-    }
-    
-    public var PF_CCITT: macro_int_t {
-        return Glibc.PF_CCITT
-    }
-    
-    public var PF_SNA: macro_int_t {
+    public var PF_SNA: pf_family_t {
         return Glibc.PF_SNA
     }
     
-    public var PF_DECnet: macro_int_t {
+    public var PF_DECnet: pf_family_t {
         return Glibc.PF_DECnet
     }
     
-    public var PF_DLI: macro_int_t {
+    public var PF_DLI: pf_family_t {
         return Glibc.PF_DLI
     }
     
-    public var PF_LAT: macro_int_t {
+    public var PF_LAT: pf_family_t {
         return Glibc.PF_LAT
     }
     
-    public var PF_HYLINK: macro_int_t {
+    public var PF_HYLINK: pf_family_t {
         return Glibc.PF_HYLINK
     }
     
-    public var PF_APPLETALK: macro_int_t {
+    public var PF_APPLETALK: pf_family_t {
         return Glibc.PF_APPLETALK
     }
     
-    public var PF_ROUTE: macro_int_t {
+    public var PF_ROUTE: pf_family_t {
         return Glibc.PF_ROUTE
     }
     
-    public var PF_LINK: macro_int_t {
+    public var PF_LINK: pf_family_t {
         return Glibc.PF_LINK
     }
     
-    public var PF_XTP: macro_int_t {
+    public var PF_XTP: pf_family_t {
         return Glibc.PF_XTP
     }
     
-    public var PF_COIP: macro_int_t {
+    public var PF_COIP: pf_family_t {
         return Glibc.PF_COIP
     }
     
-    public var PF_CNT: macro_int_t {
+    public var PF_CNT: pf_family_t {
         return Glibc.PF_CNT
     }
     
-    public var PF_SIP: macro_int_t {
+    public var PF_SIP: pf_family_t {
         return Glibc.PF_SIP
     }
     
-    public var PF_IPX: macro_int_t {
+    public var PF_IPX: pf_family_t {
         return Glibc.PF_IPX
     }
     
-    public var PF_RTIP: macro_int_t {
+    public var PF_RTIP: pf_family_t {
         return Glibc.PF_RTIP
     }
     
-    public var PF_PIP: macro_int_t {
+    public var PF_PIP: pf_family_t {
         return Glibc.PF_PIP
     }
     
-    public var PF_NDRV: macro_int_t {
+    public var PF_NDRV: pf_family_t {
         return Glibc.PF_NDRV
     }
     
-    public var PF_ISDN: macro_int_t {
+    public var PF_ISDN: pf_family_t {
         return Glibc.PF_ISDN
     }
     
-    public var PF_KEY: macro_int_t {
+    public var PF_KEY: pf_family_t {
         return Glibc.PF_KEY
     }
     
-    public var PF_INET6: macro_int_t {
+    public var PF_INET6: pf_family_t {
         return Glibc.PF_INET6
     }
     
-    public var PF_NATM: macro_int_t {
+    public var PF_NATM: pf_family_t {
         return Glibc.PF_NATM
     }
     
-    public var PF_SYSTEM: macro_int_t {
+    public var PF_SYSTEM: pf_family_t {
         return Glibc.PF_SYSTEM
     }
     
-    public var PF_NETBIOS: macro_int_t {
+    public var PF_NETBIOS: pf_family_t {
         return Glibc.PF_NETBIOS
     }
     
-    public var PF_PPP: macro_int_t {
+    public var PF_PPP: pf_family_t {
         return Glibc.PF_PPP
     }
     
-    public var PF_RESERVED_36: macro_int_t {
+    public var PF_RESERVED_36: pf_family_t {
         return Glibc.PF_RESERVED_36
     }
     
-    public var PF_UTUN: macro_int_t {
+    public var PF_UTUN: pf_family_t {
         return Glibc.PF_UTUN
     }
     
@@ -1849,11 +1813,11 @@
         return Glibc.PF_MAX
     }
     
-    public var PF_VLAN: Umacro_int_t {
+    public var PF_VLAN: UInt32 {
         return Glibc.PF_VLAN
     }
     
-    public var PF_BOND: Umacro_int_t {
+    public var PF_BOND: UInt32 {
         return Glibc.PF_BOND
     }
     
