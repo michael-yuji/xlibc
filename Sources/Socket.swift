@@ -1860,6 +1860,7 @@
         return Glibc.MSG_DONTWAIT
     }
     
+    #if os(FreeBSD)
     public var MSG_EOF: macro_int_t {
         return Glibc.MSG_EOF
     }
@@ -1891,8 +1892,10 @@
     public var MSG_NEEDSA: macro_int_t {
         return Glibc.MSG_NEEDSA
     }
+    #endif
     
     public typealias cmsghdr = Glibc.cmsghdr
+    
     
     public var SCM_RIGHTS: macro_int_t {
         return Glibc.SCM_RIGHTS
@@ -1902,6 +1905,7 @@
         return Glibc.SCM_TIMESTAMP
     }
     
+    #if os(FreeBSD)
     public var SCM_CREDS: macro_int_t {
         return Glibc.SCM_CREDS
     }
@@ -1909,16 +1913,17 @@
     public var SCM_TIMESTAMP_MONOTONIC: macro_int_t {
         return Glibc.SCM_TIMESTAMP_MONOTONIC
     }
+    #endif
     
-    public var SHUT_RD: Int32 {
+    public var SHUT_RD: Int {
         return Glibc.SHUT_RD
     }
     
-    public var SHUT_WR: Int32 {
+    public var SHUT_WR: Int {
         return Glibc.SHUT_WR
     }
     
-    public var SHUT_RDWR: Int32 {
+    public var SHUT_RDWR: Int {
         return Glibc.SHUT_RDWR
     }
     
