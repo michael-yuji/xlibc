@@ -7,39 +7,39 @@ public var MAXNAMELEN: Int32 {
     return Darwin.MAXNAMLEN
 }
     
-public var DT_UNKNOWN: Int32 {
+public var DT_UNKNOWN: Int {
         return Darwin.DT_UNKNOWN
 }
     
-public var DT_FIFO: Int32 {
+public var DT_FIFO: Int {
     return Darwin.DT_FIFO
 }
     
-public var DT_CHR: Int32 {
+public var DT_CHR: Int {
     return Darwin.DT_CHR
 }
     
-public var DT_DIR: Int32 {
+public var DT_DIR: Int {
     return Darwin.DT_CHR
 }
     
-public var DT_BLK: Int32 {
+public var DT_BLK: Int {
     return Darwin.DT_BLK
 }
     
-public var DT_REG: Int32 {
+public var DT_REG: Int {
     return Darwin.DT_REG
 }
     
-public var DT_LNK: Int32 {
+public var DT_LNK: Int {
     return Darwin.DT_LNK
 }
     
-public var DT_SOCK: Int32 {
+public var DT_SOCK: Int {
     return Darwin.DT_SOCK
 }
     
-public var DT_WHT: Int32 {
+public var DT_WHT: Int {
     return Darwin.DT_WHT
 }
 #else
