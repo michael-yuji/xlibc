@@ -23,7 +23,7 @@
         return Glibc.SIG_IGN
     }
     
-    public var S_IEXEC: mode_t {
+    public var S_IEXEC: Int32 {
         return Glibc.S_IEXEC
     }
     
@@ -59,11 +59,7 @@
         return Glibc.S_IFSOCK
     }
     
-    public var S_IFWHT: mode_t {
-        return Glibc.S_IFWHT
-    }
-    
-    public var S_IREAD: mode_t {
+    public var S_IREAD: Int32 {
         return Glibc.S_IREAD
     }
     
@@ -95,10 +91,6 @@
         return Glibc.S_ISGID
     }
     
-    public var S_ISTXT: mode_t {
-        return Glibc.S_ISTXT
-    }
-    
     public var S_ISUID: mode_t {
         return Glibc.S_ISUID
     }
@@ -115,7 +107,7 @@
         return Glibc.S_IWOTH
     }
     
-    public var S_IWRITE: mode_t {
+    public var S_IWRITE: Int32 {
         return Glibc.S_IWRITE
     }
     
@@ -135,16 +127,73 @@
         return Glibc.S_IXUSR
     }
     
-    public var TIOCCBRK: UInt {
+    public var TIOCCBRK: Int32 {
         return Glibc.TIOCCBRK
+    }
+    
+    public var TIOCCONS: Int32 {
+        return Glibc.TIOCCONS
+    }
+    
+    public var TIOCEXCL: Int32 {
+        return Glibc.TIOCEXCL
+    }
+    
+    public var TIOCGETD: Int32 {
+        return Glibc.TIOCGETD
+    }
+    
+    public var TIOCGPGRP: Int32 {
+        return Glibc.TIOCGPGRP
+    }
+    
+    public var TIOCGWINSZ: Int32 {
+        return Glibc.TIOCGWINSZ
+    }
+    
+    public var TIOCMBIC: Int32 {
+        return Glibc.TIOCMBIC
+    }
+    
+    public var TIOCMBIS: Int32 {
+        return Glibc.TIOCMBIS
+    }
+    
+    public var TIOCMGET: Int32 {
+        return Glibc.TIOCMGET
+    }
+    
+    public var TIOCMSET: Int32 {
+        return Glibc.TIOCMSET
+    }
+    
+    public var TIOCNOTTY: Int32 {
+        return Glibc.TIOCNOTTY
+    }
+    
+    public var TIOCNXCL: Int32 {
+        return Glibc.TIOCNXCL
+    }
+    
+    public var TIOCOUTQ: Int32 {
+        return Glibc.TIOCOUTQ
+    }
+    
+    public var TIOCPKT: Int32 {
+        return Glibc.TIOCPKT
+    }
+    
+    #if os(FreeBSD)
+    public var S_IFWHT: mode_t {
+        return Glibc.S_IFWHT
+    }
+
+    public var S_ISTXT: mode_t {
+        return Glibc.S_ISTXT
     }
     
     public var TIOCCDTR: UInt {
         return Glibc.TIOCCDTR
-    }
-    
-    public var TIOCCONS: UInt {
-        return Glibc.TIOCCONS
     }
     
     public var TIOCDCDTIMESTAMP: UInt {
@@ -157,10 +206,6 @@
     
     public var TIOCDSIMICROCODE: UInt {
         return Glibc.TIOCDSIMICROCODE
-    }
-    
-    public var TIOCEXCL: UInt {
-        return Glibc.TIOCEXCL
     }
     
     public var TIOCEXT: UInt {
@@ -183,24 +228,12 @@
         return Glibc.TIOCGETC
     }
     
-    public var TIOCGETD: UInt {
-        return Glibc.TIOCGETD
-    }
-    
     public var TIOCGETP: UInt {
         return Glibc.TIOCGETP
     }
     
     public var TIOCGLTC: UInt {
         return Glibc.TIOCGLTC
-    }
-    
-    public var TIOCGPGRP: UInt {
-        return Glibc.TIOCGPGRP
-    }
-    
-    public var TIOCGWINSZ: UInt {
-        return Glibc.TIOCGWINSZ
     }
     
     public var TIOCHPCL: UInt {
@@ -231,22 +264,10 @@
         return Glibc.TIOCLSET
     }
     
-    public var TIOCMBIC: UInt {
-        return Glibc.TIOCMBIC
-    }
-    
-    public var TIOCMBIS: UInt {
-        return Glibc.TIOCMBIS
-    }
-    
     public var TIOCMGDTRWAIT: UInt {
         return Glibc.TIOCMGDTRWAIT
     }
-    
-    public var TIOCMGET: UInt {
-        return Glibc.TIOCMGET
-    }
-    
+        
     public var TIOCMODG: UInt {
         return Glibc.TIOCMODG
     }
@@ -259,27 +280,6 @@
         return Glibc.TIOCMSDTRWAIT
     }
     
-    public var TIOCMSET: UInt {
-        return Glibc.TIOCMSET
-    }
-    
-    public var TIOCNOTTY: UInt {
-        return Glibc.TIOCNOTTY
-    }
-    
-    public var TIOCNXCL: UInt {
-        return Glibc.TIOCNXCL
-    }
-    
-    public var TIOCOUTQ: UInt {
-        return Glibc.TIOCOUTQ
-    }
-    
-    public var TIOCPKT: UInt {
-        return Glibc.TIOCPKT
-    }
-    
-    #if os(FreeBSD)
     public var TIOCPTYGNAME: UInt {
         return Glibc.TIOCPTYGNAME
     }
@@ -450,10 +450,10 @@
         return Glibc.cosh(x)
     }
     
-    @inline(__always)
-    public func dprintf(_ fd: Int, _ format: UnsafePointer<Int8>, _ args: CVarArg...) -> Int32 {
-        return Glibc.dprintf(Int32(fd), format, args)
-    }
+//    @inline(__always)
+//    public func dprintf(_ fd: Int, _ format: UnsafePointer<Int8>, _ args: CVarArg...) -> Int32 {
+//        return Glibc.dprintf(Int32(fd), format, args)
+//    }
     
     @inline(__always)
     public func erf(_ x: Float) -> Float {
@@ -689,7 +689,7 @@
         return Glibc.nextafter(lhs, rhs)
     }
     
-    public var noErr: OSStatus {
+    public var noErr: Int32 {
         return Glibc.noErr
     }
     
@@ -830,10 +830,12 @@
         return Glibc.yn(n, x)
     }
     
+    #if os(FreeBSD)
     @inline(__always)
     public func basename(_ name: UnsafeMutablePointer<Int8>!) -> UnsafeMutablePointer<Int8>! {
         return Glibc.basename(name)
     }
+    #endif
     
     @inline(__always)
     public func dirname(_ name: UnsafeMutablePointer<Int8>!) -> UnsafeMutablePointer<Int8>! {
