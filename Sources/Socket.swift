@@ -1817,46 +1817,6 @@
         return Glibc.PF_VLAN
     }
     
-    public var PF_BOND: UInt32 {
-        return Glibc.PF_BOND
-    }
-    
-    public var NET_MAXID: macro_int_t {
-        return Glibc.NET_MAXID
-    }
-    
-    public var NET_RT_DUMP: macro_int_t {
-        return Glibc.NET_RT_DUMP
-    }
-    
-    public var NET_RT_FLAGS: macro_int_t {
-        return Glibc.NET_RT_FLAGS
-    }
-    
-    public var NET_RT_IFLIST: macro_int_t {
-        return Glibc.NET_RT_IFLIST
-    }
-    
-    public var NET_RT_STAT: macro_int_t {
-        return Glibc.NET_RT_STAT
-    }
-    
-    public var NET_RT_TRASH: macro_int_t {
-        return Glibc.NET_RT_TRASH
-    }
-    
-    public var NET_RT_IFLIST2: macro_int_t {
-        return Glibc.NET_RT_IFLIST2
-    }
-    
-    public var NET_RT_DUMP2: macro_int_t {
-        return Glibc.NET_RT_DUMP2
-    }
-    
-    public var NET_RT_MAXID: macro_int_t {
-        return Glibc.NET_RT_MAXID
-    }
-    
     public var SOMAXCONN: macro_int_t {
         return Glibc.SOMAXCONN
     }
