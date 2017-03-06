@@ -193,6 +193,7 @@
         return Glibc.S_BLKSIZE
     }
     
+    #if os(FreeBSD)
     public var UF_SETTABLE: Int32 {
         return Glibc.UF_SETTABLE
     }
@@ -254,6 +255,17 @@
     }
     
     @inline(__always)
+    public func fchflags(_ fd: Int32, _ flags: __uint32_t) -> Int32 {
+        return Glibc.fchflags(fd, flags)
+    }
+    
+    @inline(__always)
+    public func lchflags(_ path: UnsafePointer<Int8>!, _ flags: __uint32_t) -> Int32 {
+        return Glibc.lchflags(path, flags)
+    }
+    #endif
+    
+    @inline(__always)
     public func chmod(_ path: UnsafePointer<Int8>!, _ mode: mode_t) -> Int32 {
         return Glibc.chmod(path, mode)
     }
@@ -312,55 +324,11 @@
     public func chflags(_ pathname: UnsafePointer<Int8>!, _ flags: __uint32_t) -> Int32 {
         return Glibc.chflags(pathname, flags)
     }
-    
-//    @inline(__always)
-//    public func chmodx_np(_ path: UnsafePointer<Int8>!, _ fsec: filesec_t!) -> Int32 {
-//        return Glibc.chmodx_np(path, fsec)
-//    }
-//    
-    @inline(__always)
-    public func fchflags(_ fd: Int32, _ flags: __uint32_t) -> Int32 {
-        return Glibc.fchflags(fd, flags)
-    }
-//    
-//    @inline(__always)
-//    public func fchmodx_np(_ fd: Int32, _ fsec: filesec_t!) -> Int32 {
-//        return Glibc.fchmodx_np(fd, fsec)
-//    }
-//    
-//    @inline(__always)
-//    public func fstatx_np(_ fd: Int32, _ buf: UnsafeMutablePointer<stat>!, _ fsec: filesec_t!) -> Int32 {
-//        return Glibc.fstatx_np(fd, buf, fsec)
-//    }
-    
-    @inline(__always)
-    public func lchflags(_ path: UnsafePointer<Int8>!, _ flags: __uint32_t) -> Int32 {
-        return Glibc.lchflags(path, flags)
-    }
-    
+
     @inline(__always)
     public func lchmod(_ path: UnsafePointer<Int8>!, _ mode: mode_t) -> Int32 {
         return Glibc.lchmod(path, mode)
     }
     
-//    @inline(__always)
-//    public func lstatx_np(_ path: UnsafePointer<Int8>!, _ buf: UnsafeMutablePointer<stat>!, _ fsec: filesec_t!) -> Int32 {
-//        return Glibc.lstatx_np(path, buf, fsec)
-//    }
-//    
-//    @inline(__always)
-//    public func mkdirx_np(_ path: UnsafePointer<Int8>!, _ fsec: filesec_t!) -> Int32 {
-//        return Glibc.mkdirx_np(path, fsec)
-//    }
-//    
-//    @inline(__always)
-//    public func mkfifox_np(_ path: UnsafePointer<Int8>!, _ fsec: filesec_t!) -> Int32 {
-//        return Glibc.mkfifox_np(path, fsec)
-//    }
-//    
-//    @inline(__always)
-//    public func statx_np(_ path: UnsafePointer<Int8>!, _ buf: UnsafeMutablePointer<stat>!, _ fsec: filesec_t!) -> Int32 {
-//        return Glibc.statx_np(path, buf, fsec)
-//    }
     
 #endif
