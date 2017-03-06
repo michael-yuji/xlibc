@@ -2041,6 +2041,16 @@
     public func sendfile(_ fd: Int32, _ socket: Int32, _ offset: off_t, _ hdtr: UnsafeMutablePointer<off_t>!, _ flags: UnsafeMutablePointer<sf_hdtr>!, _ count: Int32) -> Int32 {
         return sendfile(fd, socket, offset, hdtr, flags, count)
     }
+    
+    @inline(__always)
+    public func connectx(_ socket: Int32, _ endpoints: UnsafePointer<sa_endpoints_t>!, _ associd: sae_associd_t, _ flags: UInt32, _ iov: UnsafePointer<iovec>!, _ iovcnt: UInt32, _ len: UnsafeMutablePointer<Int>!, _ connid: UnsafeMutablePointer<sae_connid_t>!) -> Int32 {
+        return Glibc.connectx(socket, endpoints, associd, flags, iov, iovcnt, len, connid)
+    }
+    
+    @inline(__always)
+    public func disconnectx(_ socket: Int32, _ associd: sae_associd_t, _ connid: sae_connid_t) -> Int32 {
+        return Glibc.disconnectx(socket, associd, connid)
+    }
 #else
     @inline(__always)
     public func sendfile(_ out_fd: Int32, _ in_fd: Int32, _ offset: UnsafePointer<off_t>!, _ count: Int32) -> Int32 {
@@ -2052,15 +2062,6 @@
 //    public func pfctlinput(_ socket: Int32, _ addr: UnsafeMutablePointer<sockaddr>!) {
 //        return Glibc.pfctlinput(socket, addr)
 //    }
-//    
-    @inline(__always)
-    public func connectx(_ socket: Int32, _ endpoints: UnsafePointer<sa_endpoints_t>!, _ associd: sae_associd_t, _ flags: UInt32, _ iov: UnsafePointer<iovec>!, _ iovcnt: UInt32, _ len: UnsafeMutablePointer<Int>!, _ connid: UnsafeMutablePointer<sae_connid_t>!) -> Int32 {
-        return Glibc.connectx(socket, endpoints, associd, flags, iov, iovcnt, len, connid)
-    }
-    
-    @inline(__always)
-    public func disconnectx(_ socket: Int32, _ associd: sae_associd_t, _ connid: sae_connid_t) -> Int32 {
-        return Glibc.disconnectx(socket, associd, connid)
-    }
+//
     
 #endif
