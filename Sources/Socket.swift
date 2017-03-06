@@ -1055,6 +1055,7 @@
 #else
     import Glibc
     
+    #if os(FreeBSD)
     public var KEV_INET_SUBCLASS: macro_int_t {
         return Glibc.KEV_INET_SUBCLASS
     }
@@ -1246,25 +1247,34 @@
     public var KEV_INET6_DEFROUTER: macro_int_t {
         return Glibc.KEV_INET6_DEFROUTER
     }
+    #endif
     
     public var SOCK_STREAM: Int32 {
-        return Glibc.SOCK_STREAM.rawValue
+        return Int32(Glibc.SOCK_STREAM.rawValue)
     }
     
     public var SOCK_DGRAM: Int32 {
-        return Glibc.SOCK_DGRAM.rawValue
+        return Int32(Glibc.SOCK_DGRAM.rawValue)
     }
     
     public var SOCK_RAW: Int32 {
-        return Glibc.SOCK_RAW.rawValue
+        return Int32(Glibc.SOCK_RAW.rawValue)
     }
     
     public var SOCK_RDM: Int32 {
-        return Glibc.SOCK_RDM.rawValue
+        return Int32(Glibc.SOCK_RDM.rawValue)
     }
     
     public var SOCK_SEQPACKET: Int32 {
-        return Glibc.SOCK_SEQPACKET.rawValue
+        return Int32(Glibc.SOCK_SEQPACKET.rawValue)
+    }
+    
+    public var SOCK_DCCP: Int32 {
+        return Int32(Glibc.SOCK_DCCP.rawValue)
+    }
+    
+    public var SOCK_PACKET: Int32 {
+        return Int32(Glibc.SOCK_PACKET.rawValue)
     }
     
     public var SO_DEBUG: Int32 {
@@ -1289,10 +1299,6 @@
     
     public var SO_BROADCAST: Int32 {
         return Glibc.SO_BROADCAST
-    }
-    
-    public var SO_USELOOPBACK: Int32 {
-        return Glibc.SO_USELOOPBACK
     }
     
     public var SO_LINGER: Int32 {
@@ -1344,6 +1350,10 @@
     }
     
     #if os(FreeBSD)
+    public var SO_USELOOPBACK: Int32 {
+        return Glibc.SO_USELOOPBACK
+    }
+        
     public var SO_TIMESTAMP_MONOTONIC: Int32 {
         return Glibc.SO_TIMESTAMP_MONOTONIC
     }
