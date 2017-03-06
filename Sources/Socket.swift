@@ -1247,71 +1247,71 @@
         return Glibc.KEV_INET6_DEFROUTER
     }
     
-    public var SOCK_STREAM: macro_int_t {
+    public var SOCK_STREAM: Int32 {
         return Glibc.SOCK_STREAM
     }
     
-    public var SOCK_DGRAM: macro_int_t {
+    public var SOCK_DGRAM: Int32 {
         return Glibc.SOCK_DGRAM
     }
     
-    public var SOCK_RAW: macro_int_t {
+    public var SOCK_RAW: Int32 {
         return Glibc.SOCK_RAW
     }
     
-    public var SOCK_RDM: macro_int_t {
+    public var SOCK_RDM: Int32 {
         return Glibc.SOCK_RDM
     }
     
-    public var SOCK_SEQPACKET: macro_int_t {
+    public var SOCK_SEQPACKET: Int32 {
         return Glibc.SOCK_SEQPACKET
     }
     
-    public var SO_DEBUG: macro_int_t {
+    public var SO_DEBUG: Int32 {
         return Glibc.SO_DEBUG
     }
     
-    public var SO_ACCEPTCONN: macro_int_t {
+    public var SO_ACCEPTCONN: Int32 {
         return Glibc.SO_ACCEPTCONN
     }
     
-    public var SO_REUSEADDR: macro_int_t {
+    public var SO_REUSEADDR: Int32 {
         return Glibc.SO_REUSEADDR
     }
     
-    public var SO_KEEPALIVE: macro_int_t {
+    public var SO_KEEPALIVE: Int32 {
         return Glibc.SO_KEEPALIVE
     }
     
-    public var SO_DONTROUTE: macro_int_t {
+    public var SO_DONTROUTE: Int32 {
         return Glibc.SO_DONTROUTE
     }
     
-    public var SO_BROADCAST: macro_int_t {
+    public var SO_BROADCAST: Int32 {
         return Glibc.SO_BROADCAST
     }
     
-    public var SO_USELOOPBACK: macro_int_t {
+    public var SO_USELOOPBACK: Int32 {
         return Glibc.SO_USELOOPBACK
     }
     
-    public var SO_LINGER: macro_int_t {
+    public var SO_LINGER: Int32 {
         return Glibc.SO_LINGER
     }
     
-    public var SO_OOBINLINE: macro_int_t {
+    public var SO_OOBINLINE: Int32 {
         return Glibc.SO_OOBINLINE
     }
     
-    public var SO_REUSEPORT: macro_int_t {
+    public var SO_REUSEPORT: Int32 {
         return Glibc.SO_REUSEPORT
     }
     
-    public var SO_TIMESTAMP: macro_int_t {
+    public var SO_TIMESTAMP: Int32 {
         return Glibc.SO_TIMESTAMP
     }
     
-    public var SO_TIMESTAMP_MONOTONIC: macro_int_t {
+    public var SO_TIMESTAMP_MONOTONIC: Int32 {
         return Glibc.SO_TIMESTAMP_MONOTONIC
     }
     
@@ -1319,46 +1319,47 @@
         return Glibc.SO_DONTTRUNC
     }
     
-    public var SO_WANTMORE: macro_int_t {
+    public var SO_WANTMORE: Int32 {
         return Glibc.SO_WANTMORE
     }
     
-    public var SO_WANTOOBFLAG: macro_int_t {
+    public var SO_WANTOOBFLAG: Int32 {
         return Glibc.SO_WANTOOBFLAG
     }
     
-    public var SO_SNDBUF: macro_int_t {
+    public var SO_SNDBUF: Int32 {
         return Glibc.SO_SNDBUF
     }
     
-    public var SO_RCVBUF: macro_int_t {
+    public var SO_RCVBUF: Int32 {
         return Glibc.SO_RCVBUF
     }
     
-    public var SO_SNDLOWAT: macro_int_t {
+    public var SO_SNDLOWAT: Int32 {
         return Glibc.SO_SNDLOWAT
     }
     
-    public var SO_RCVLOWAT: macro_int_t {
+    public var SO_RCVLOWAT: Int32 {
         return Glibc.SO_RCVLOWAT
     }
     
-    public var SO_SNDTIMEO: macro_int_t {
+    public var SO_SNDTIMEO: Int32 {
         return Glibc.SO_SNDTIMEO
     }
     
-    public var SO_RCVTIMEO: macro_int_t {
+    public var SO_RCVTIMEO: Int32 {
         return Glibc.SO_RCVTIMEO
     }
     
-    public var SO_ERROR: macro_int_t {
+    public var SO_ERROR: Int32 {
         return Glibc.SO_ERROR
     }
     
-    public var SO_TYPE: macro_int_t {
+    public var SO_TYPE: Int32 {
         return Glibc.SO_TYPE
     }
     
+    #if os(FreeBSD)
     public var SO_LABEL: macro_int_t {
         return Glibc.SO_LABEL
     }
@@ -1490,14 +1491,11 @@
     public var CONNECT_DATA_IDEMPOTENT: macro_int_t {
         return Glibc.CONNECT_DATA_IDEMPOTENT
     }
+    #endif
     
     public typealias linger = Glibc.linger
     
-    public var SONPX_SETOPTSHUT: macro_int_t {
-        return Glibc.SONPX_SETOPTSHUT
-    }
-    
-    public var SOL_SOCKET: macro_int_t {
+    public var SOL_SOCKET: Int32 {
         return Glibc.SOL_SOCKET
     }
     
@@ -1517,6 +1515,39 @@
         return Glibc.AF_INET
     }
     
+    public var AF_SNA: pf_family_t {
+        return Glibc.AF_SNA
+    }
+    
+    public var AF_DECnet: pf_family_t {
+        return Glibc.AF_DECnet
+    }
+    
+    public var AF_APPLETALK: pf_family_t {
+        return Glibc.AF_APPLETALK
+    }
+    
+    public var AF_ROUTE: pf_family_t {
+        return Glibc.AF_ROUTE
+    }
+    
+    public var AF_IPX: pf_family_t {
+        return Glibc.AF_IPX
+    }
+    
+    public var AF_ISDN: pf_family_t {
+        return Glibc.AF_ISDN
+    }
+
+    public var AF_INET6: pf_family_t {
+        return Glibc.AF_INET6
+    }
+    
+    #if os(FreeBSD)
+    public var SONPX_SETOPTSHUT: macro_int_t {
+        return Glibc.SONPX_SETOPTSHUT
+    }
+
     public var AF_IMPLINK: pf_family_t {
         return Glibc.AF_IMPLINK
     }
@@ -1528,7 +1559,7 @@
     public var AF_CHAOS: pf_family_t {
         return Glibc.AF_CHAOS
     }
-    
+
     public var AF_NS: pf_family_t {
         return Glibc.AF_NS
     }
@@ -1553,14 +1584,6 @@
         return Glibc.AF_CCITT
     }
     
-    public var AF_SNA: pf_family_t {
-        return Glibc.AF_SNA
-    }
-    
-    public var AF_DECnet: pf_family_t {
-        return Glibc.AF_DECnet
-    }
-    
     public var AF_DLI: pf_family_t {
         return Glibc.AF_DLI
     }
@@ -1572,15 +1595,7 @@
     public var AF_HYLINK: pf_family_t {
         return Glibc.AF_HYLINK
     }
-    
-    public var AF_APPLETALK: pf_family_t {
-        return Glibc.AF_APPLETALK
-    }
-    
-    public var AF_ROUTE: pf_family_t {
-        return Glibc.AF_ROUTE
-    }
-    
+        
     public var AF_LINK: pf_family_t {
         return Glibc.AF_LINK
     }
@@ -1596,13 +1611,9 @@
     public var AF_CNT: pf_family_t {
         return Glibc.AF_CNT
     }
-    
+
     public var pseudo_AF_RTIP: pf_family_t {
         return Glibc.pseudo_AF_RTIP
-    }
-    
-    public var AF_IPX: pf_family_t {
-        return Glibc.AF_IPX
     }
     
     public var AF_SIP: pf_family_t {
@@ -1617,19 +1628,9 @@
         return Glibc.AF_NDRV
     }
     
-    public var AF_ISDN: pf_family_t {
-        return Glibc.AF_ISDN
-    }
-    
     public var AF_E164: pf_family_t {
         return Glibc.AF_E164
     }
-    
-    public var AF_INET6: pf_family_t {
-        return Glibc.AF_INET6
-    }
-    
-    #if os(FreeBSD)
         
     public var pseudo_AF_KEY: pf_family_t {
         return Glibc.pseudo_AF_KEY
