@@ -1501,200 +1501,202 @@
         return Glibc.SOL_SOCKET
     }
     
-    public var AF_UNSPEC: macro_int_t {
+    public var AF_UNSPEC: pf_family_t {
         return Glibc.AF_UNSPEC
     }
     
-    public var AF_UNIX: macro_int_t {
+    public var AF_UNIX: pf_family_t {
         return Glibc.AF_UNIX
     }
     
-    public var AF_LOCAL: macro_int_t {
+    public var AF_LOCAL: pf_family_t {
         return Glibc.AF_LOCAL
     }
     
-    public var AF_INET: macro_int_t {
+    public var AF_INET: pf_family_t {
         return Glibc.AF_INET
     }
     
-    public var AF_IMPLINK: macro_int_t {
+    public var AF_IMPLINK: pf_family_t {
         return Glibc.AF_IMPLINK
     }
     
-    public var AF_PUP: macro_int_t {
+    public var AF_PUP: pf_family_t {
         return Glibc.AF_PUP
     }
     
-    public var AF_CHAOS: macro_int_t {
+    public var AF_CHAOS: pf_family_t {
         return Glibc.AF_CHAOS
     }
     
-    public var AF_NS: macro_int_t {
+    public var AF_NS: pf_family_t {
         return Glibc.AF_NS
     }
     
-    public var AF_ISO: macro_int_t {
+    public var AF_ISO: pf_family_t {
         return Glibc.AF_ISO
     }
     
-    public var AF_OSI: macro_int_t {
+    public var AF_OSI: pf_family_t {
         return Glibc.AF_OSI
     }
     
-    public var AF_ECMA: macro_int_t {
+    public var AF_ECMA: pf_family_t {
         return Glibc.AF_ECMA
     }
     
-    public var AF_DATAKIT: macro_int_t {
+    public var AF_DATAKIT: pf_family_t {
         return Glibc.AF_DATAKIT
     }
     
-    public var AF_CCITT: macro_int_t {
+    public var AF_CCITT: pf_family_t {
         return Glibc.AF_CCITT
     }
     
-    public var AF_SNA: macro_int_t {
+    public var AF_SNA: pf_family_t {
         return Glibc.AF_SNA
     }
     
-    public var AF_DECnet: macro_int_t {
+    public var AF_DECnet: pf_family_t {
         return Glibc.AF_DECnet
     }
     
-    public var AF_DLI: macro_int_t {
+    public var AF_DLI: pf_family_t {
         return Glibc.AF_DLI
     }
     
-    public var AF_LAT: macro_int_t {
+    public var AF_LAT: pf_family_t {
         return Glibc.AF_LAT
     }
     
-    public var AF_HYLINK: macro_int_t {
+    public var AF_HYLINK: pf_family_t {
         return Glibc.AF_HYLINK
     }
     
-    public var AF_APPLETALK: macro_int_t {
+    public var AF_APPLETALK: pf_family_t {
         return Glibc.AF_APPLETALK
     }
     
-    public var AF_ROUTE: macro_int_t {
+    public var AF_ROUTE: pf_family_t {
         return Glibc.AF_ROUTE
     }
     
-    public var AF_LINK: macro_int_t {
+    public var AF_LINK: pf_family_t {
         return Glibc.AF_LINK
     }
     
-    public var pseudo_AF_XTP: macro_int_t {
+    public var pseudo_AF_XTP: pf_family_t {
         return Glibc.pseudo_AF_XTP
     }
     
-    public var AF_COIP: macro_int_t {
+    public var AF_COIP: pf_family_t {
         return Glibc.AF_COIP
     }
     
-    public var AF_CNT: macro_int_t {
+    public var AF_CNT: pf_family_t {
         return Glibc.AF_CNT
     }
     
-    public var pseudo_AF_RTIP: macro_int_t {
+    public var pseudo_AF_RTIP: pf_family_t {
         return Glibc.pseudo_AF_RTIP
     }
     
-    public var AF_IPX: macro_int_t {
+    public var AF_IPX: pf_family_t {
         return Glibc.AF_IPX
     }
     
-    public var AF_SIP: macro_int_t {
+    public var AF_SIP: pf_family_t {
         return Glibc.AF_SIP
     }
     
-    public var pseudo_AF_PIP: macro_int_t {
+    public var pseudo_AF_PIP: pf_family_t {
         return Glibc.pseudo_AF_PIP
     }
     
-    public var AF_NDRV: macro_int_t {
+    public var AF_NDRV: pf_family_t {
         return Glibc.AF_NDRV
     }
     
-    public var AF_ISDN: macro_int_t {
+    public var AF_ISDN: pf_family_t {
         return Glibc.AF_ISDN
     }
     
-    public var AF_E164: macro_int_t {
+    public var AF_E164: pf_family_t {
         return Glibc.AF_E164
     }
     
-    public var pseudo_AF_KEY: macro_int_t {
-        return Glibc.pseudo_AF_KEY
-    }
-    
-    public var AF_INET6: macro_int_t {
+    public var AF_INET6: pf_family_t {
         return Glibc.AF_INET6
     }
     
-    public var AF_NATM: macro_int_t {
+    #if os(FreeBSD)
+        
+    public var pseudo_AF_KEY: pf_family_t {
+        return Glibc.pseudo_AF_KEY
+    }
+        
+    public var AF_NATM: pf_family_t {
         return Glibc.AF_NATM
     }
     
-    public var AF_SYSTEM: macro_int_t {
+    public var AF_SYSTEM: pf_family_t {
         return Glibc.AF_SYSTEM
     }
     
-    public var AF_NETBIOS: macro_int_t {
+    public var AF_NETBIOS: pf_family_t {
         return Glibc.AF_NETBIOS
     }
     
-    public var AF_PPP: macro_int_t {
+    public var AF_PPP: pf_family_t {
         return Glibc.AF_PPP
     }
     
-    public var pseudo_AF_HDRCMPLT: macro_int_t {
+    public var pseudo_AF_HDRCMPLT: pf_family_t {
         return Glibc.pseudo_AF_HDRCMPLT
     }
     
-    public var AF_RESERVED_36: macro_int_t {
+    public var AF_RESERVED_36: pf_family_t {
         return Glibc.AF_RESERVED_36
     }
     
-    public var AF_IEEE80211: macro_int_t {
+    public var AF_IEEE80211: pf_family_t {
         return Glibc.AF_IEEE80211
     }
     
-    public var AF_UTUN: macro_int_t {
+    public var AF_UTUN: pf_family_t {
         return Glibc.AF_UTUN
     }
+    #endif
     
-    public var AF_MAX: macro_int_t {
+    public var AF_MAX: Int32 {
         return Glibc.AF_MAX
     }
     
     public typealias sockaddr = Glibc.sockaddr
     
+    #if os(FreeBSD)
+        
     public var SOCK_MAXADDRLEN: macro_int_t {
         return Glibc.SOCK_MAXADDRLEN
     }
     
-    #if os(FreeBSD)
     public typealias sockproto = Glibc.sockproto
         
     public typealias so_np_extensions = Glibc.so_np_extensions
-        
-        
-        public typealias sae_associd_t = Glibc.sae_associd_t
-        
-        public typealias sae_connid_t = Glibc.sae_connid_t
-        
-        public typealias sa_endpoints = Glibc.sa_endpoints
-        
-        public typealias sa_endpoints_t = Glibc.sa_endpoints_t
-        
-        
-    #endif
+    
+    public typealias sae_associd_t = Glibc.sae_associd_t
+    
+    public typealias sae_connid_t = Glibc.sae_connid_t
+    
+    public typealias sa_endpoints = Glibc.sa_endpoints
+    
+    public typealias sa_endpoints_t = Glibc.sa_endpoints_t
     
     public var _SS_MAXSIZE: macro_int_t {
         return Glibc._SS_MAXSIZE
     }
+        
+    #endif
     
     public typealias sockaddr_storage = Glibc.sockaddr_storage
     
@@ -1722,6 +1724,37 @@
         return Glibc.PF_DECnet
     }
     
+    public var PF_APPLETALK: pf_family_t {
+        return Glibc.PF_APPLETALK
+    }
+    
+    public var PF_ROUTE: pf_family_t {
+        return Glibc.PF_ROUTE
+    }
+    
+    
+    public var PF_IPX: pf_family_t {
+        return Glibc.PF_IPX
+    }
+
+    public var PF_ISDN: pf_family_t {
+        return Glibc.PF_ISDN
+    }
+    
+    public var PF_KEY: pf_family_t {
+        return Glibc.PF_KEY
+    }
+    
+    public var PF_INET6: pf_family_t {
+        return Glibc.PF_INET6
+    }
+
+    public var PF_MAX: Int32 {
+        return Glibc.PF_MAX
+    }
+    
+    #if os(FreeBSD)
+        
     public var PF_DLI: pf_family_t {
         return Glibc.PF_DLI
     }
@@ -1732,14 +1765,6 @@
     
     public var PF_HYLINK: pf_family_t {
         return Glibc.PF_HYLINK
-    }
-    
-    public var PF_APPLETALK: pf_family_t {
-        return Glibc.PF_APPLETALK
-    }
-    
-    public var PF_ROUTE: pf_family_t {
-        return Glibc.PF_ROUTE
     }
     
     public var PF_LINK: pf_family_t {
@@ -1762,14 +1787,10 @@
         return Glibc.PF_SIP
     }
     
-    public var PF_IPX: pf_family_t {
-        return Glibc.PF_IPX
-    }
-    
     public var PF_RTIP: pf_family_t {
         return Glibc.PF_RTIP
     }
-    
+        
     public var PF_PIP: pf_family_t {
         return Glibc.PF_PIP
     }
@@ -1777,19 +1798,20 @@
     public var PF_NDRV: pf_family_t {
         return Glibc.PF_NDRV
     }
-    
-    public var PF_ISDN: pf_family_t {
-        return Glibc.PF_ISDN
+
+        
+    public var PF_VLAN: UInt32 {
+        return Glibc.PF_VLAN
     }
-    
-    public var PF_KEY: pf_family_t {
-        return Glibc.PF_KEY
+        
+    public var PF_UTUN: pf_family_t {
+        return Glibc.PF_UTUN
     }
-    
-    public var PF_INET6: pf_family_t {
-        return Glibc.PF_INET6
+        
+    public var PF_PPP: pf_family_t {
+        return Glibc.PF_PPP
     }
-    
+        
     public var PF_NATM: pf_family_t {
         return Glibc.PF_NATM
     }
@@ -1801,62 +1823,44 @@
     public var PF_NETBIOS: pf_family_t {
         return Glibc.PF_NETBIOS
     }
+
+    #endif
     
-    public var PF_PPP: pf_family_t {
-        return Glibc.PF_PPP
-    }
-    
-    public var PF_RESERVED_36: pf_family_t {
-        return Glibc.PF_RESERVED_36
-    }
-    
-    public var PF_UTUN: pf_family_t {
-        return Glibc.PF_UTUN
-    }
-    
-    public var PF_MAX: macro_int_t {
-        return Glibc.PF_MAX
-    }
-    
-    public var PF_VLAN: UInt32 {
-        return Glibc.PF_VLAN
-    }
-    
-    public var SOMAXCONN: macro_int_t {
+    public var SOMAXCONN: Int32 {
         return Glibc.SOMAXCONN
     }
     
     public typealias msghdr = Glibc.msghdr
     
-    public var MSG_OOB: macro_int_t {
+    public var MSG_OOB: Int {
         return Glibc.MSG_OOB
     }
     
-    public var MSG_PEEK: macro_int_t {
+    public var MSG_PEEK: Int {
         return Glibc.MSG_PEEK
     }
     
-    public var MSG_DONTROUTE: macro_int_t {
+    public var MSG_DONTROUTE: Int {
         return Glibc.MSG_DONTROUTE
     }
     
-    public var MSG_EOR: macro_int_t {
+    public var MSG_EOR: Int {
         return Glibc.MSG_EOR
     }
     
-    public var MSG_TRUNC: macro_int_t {
+    public var MSG_TRUNC: Int {
         return Glibc.MSG_TRUNC
     }
     
-    public var MSG_CTRUNC: macro_int_t {
+    public var MSG_CTRUNC: Int {
         return Glibc.MSG_CTRUNC
     }
     
-    public var MSG_WAITALL: macro_int_t {
+    public var MSG_WAITALL: Int {
         return Glibc.MSG_WAITALL
     }
     
-    public var MSG_DONTWAIT: macro_int_t {
+    public var MSG_DONTWAIT: Int {
         return Glibc.MSG_DONTWAIT
     }
     
@@ -1897,11 +1901,11 @@
     public typealias cmsghdr = Glibc.cmsghdr
     
     
-    public var SCM_RIGHTS: macro_int_t {
+    public var SCM_RIGHTS: Int {
         return Glibc.SCM_RIGHTS
     }
     
-    public var SCM_TIMESTAMP: macro_int_t {
+    public var SCM_TIMESTAMP: Int32 {
         return Glibc.SCM_TIMESTAMP
     }
     
