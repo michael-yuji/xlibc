@@ -263,6 +263,11 @@
     public func lchflags(_ path: UnsafePointer<Int8>!, _ flags: __uint32_t) -> Int32 {
         return Glibc.lchflags(path, flags)
     }
+        
+    @inline(__always)
+    public func chflags(_ pathname: UnsafePointer<Int8>!, _ flags: __uint32_t) -> Int32 {
+        return Glibc.chflags(pathname, flags)
+    }
     #endif
     
     @inline(__always)
@@ -318,11 +323,6 @@
     @inline(__always)
     public func mkdirat(_ dirfd: Int32, _ pathname: UnsafePointer<Int8>!, _ mode: mode_t) -> Int32 {
         return Glibc.mkdirat(dirfd, pathname, mode)
-    }
-    
-    @inline(__always)
-    public func chflags(_ pathname: UnsafePointer<Int8>!, _ flags: __uint32_t) -> Int32 {
-        return Glibc.chflags(pathname, flags)
     }
 
     @inline(__always)
