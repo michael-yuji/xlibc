@@ -1905,15 +1905,15 @@
         return Glibc.SCM_TIMESTAMP_MONOTONIC
     }
     
-    public var SHUT_RD: macro_int_t {
+    public var SHUT_RD: Int32 {
         return Glibc.SHUT_RD
     }
     
-    public var SHUT_WR: macro_int_t {
+    public var SHUT_WR: Int32 {
         return Glibc.SHUT_WR
     }
     
-    public var SHUT_RDWR: macro_int_t {
+    public var SHUT_RDWR: Int32 {
         return Glibc.SHUT_RDWR
     }
     
@@ -2016,10 +2016,10 @@
     public func sendfile(_ fd: Int32, _ socket: Int32, _ offset: off_t, _ hdtr: UnsafeMutablePointer<off_t>!, _ flags: UnsafeMutablePointer<sf_hdtr>!, _ count: Int32) -> Int32 {
         return sendfile(fd, socket, offset, hdtr, flags, count)
     }
-    #else
+#else
     @inline(__always)
     public func sendfile(_ out_fd: Int32, _ in_fd: Int32, _ offset: UnsafePointer<off_t>!, _ count: Int32) -> Int32 {
-        return sendfile(fd, socket, offset, hdtr, flags)
+        return sendfile(out_fd, in_fd, offset, count)
     }
 #endif
     
