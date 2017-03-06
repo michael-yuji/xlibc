@@ -1475,13 +1475,9 @@
         return Glibc.NETSVC_MRKNG_LVL_L3L2_BK
     }
     
-    public typealias sae_associd_t = Glibc.sae_associd_t
-    
     public var SAE_ASSOCID_ANY: macro_int_t {
         return Glibc.SAE_ASSOCID_ANY
     }
-    
-    public typealias sae_connid_t = Glibc.sae_connid_t
     
     public var SAE_CONNID_ANY: macro_int_t {
         return Glibc.SAE_CONNID_ANY
@@ -1495,13 +1491,7 @@
         return Glibc.CONNECT_DATA_IDEMPOTENT
     }
     
-    public typealias sa_endpoints = Glibc.sa_endpoints
-    
-    public typealias sa_endpoints_t = Glibc.sa_endpoints_t
-    
     public typealias linger = Glibc.linger
-    
-    public typealias so_np_extensions = Glibc.so_np_extensions
     
     public var SONPX_SETOPTSHUT: macro_int_t {
         return Glibc.SONPX_SETOPTSHUT
@@ -1685,7 +1675,22 @@
         return Glibc.SOCK_MAXADDRLEN
     }
     
+    #if os(FreeBSD)
     public typealias sockproto = Glibc.sockproto
+        
+    public typealias so_np_extensions = Glibc.so_np_extensions
+        
+        
+        public typealias sae_associd_t = Glibc.sae_associd_t
+        
+        public typealias sae_connid_t = Glibc.sae_connid_t
+        
+        public typealias sa_endpoints = Glibc.sa_endpoints
+        
+        public typealias sa_endpoints_t = Glibc.sa_endpoints_t
+        
+        
+    #endif
     
     public var _SS_MAXSIZE: macro_int_t {
         return Glibc._SS_MAXSIZE

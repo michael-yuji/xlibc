@@ -279,6 +279,7 @@
         return Glibc.TIOCPKT
     }
     
+    #if os(FreeBSD)
     public var TIOCPTYGNAME: UInt {
         return Glibc.TIOCPTYGNAME
     }
@@ -382,6 +383,7 @@
     public var TIOCUCNTL: UInt {
         return Glibc.TIOCUCNTL
     }
+    #endif
     
     @inline(__always)
     public func acos(_ x: Float) -> Float {
@@ -450,7 +452,7 @@
     
     @inline(__always)
     public func dprintf(_ fd: Int, _ format: UnsafePointer<Int8>, _ args: CVarArg...) -> Int32 {
-        return Glibc.dprintf(fd, format, args)
+        return Glibc.dprintf(Int32(fd), format, args)
     }
     
     @inline(__always)
@@ -830,12 +832,12 @@
     
     @inline(__always)
     public func basename(_ name: UnsafeMutablePointer<Int8>!) -> UnsafeMutablePointer<Int8>! {
-        return Darwin.basename(name)
+        return Glibc.basename(name)
     }
     
     @inline(__always)
     public func dirname(_ name: UnsafeMutablePointer<Int8>!) -> UnsafeMutablePointer<Int8>! {
-        return Darwin.dirname(name)
+        return Glibc.dirname(name)
     }
     
 #endif
