@@ -1248,23 +1248,23 @@
     }
     
     public var SOCK_STREAM: Int32 {
-        return Glibc.SOCK_STREAM
+        return Glibc.SOCK_STREAM.rawValue
     }
     
     public var SOCK_DGRAM: Int32 {
-        return Glibc.SOCK_DGRAM
+        return Glibc.SOCK_DGRAM.rawValue
     }
     
     public var SOCK_RAW: Int32 {
-        return Glibc.SOCK_RAW
+        return Glibc.SOCK_RAW.rawValue
     }
     
     public var SOCK_RDM: Int32 {
-        return Glibc.SOCK_RDM
+        return Glibc.SOCK_RDM.rawValue
     }
     
     public var SOCK_SEQPACKET: Int32 {
-        return Glibc.SOCK_SEQPACKET
+        return Glibc.SOCK_SEQPACKET.rawValue
     }
     
     public var SO_DEBUG: Int32 {

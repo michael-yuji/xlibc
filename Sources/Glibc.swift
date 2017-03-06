@@ -689,9 +689,9 @@
         return Glibc.nextafter(lhs, rhs)
     }
     
-    public var noErr: Int32 {
-        return Glibc.noErr
-    }
+//    public var noErr: Int32 {
+//        return Glibc.noErr
+//    }
     
     @inline(__always)
     public func open(_ path: UnsafePointer<CChar>, _ oflag: Int32) -> Int32 {
