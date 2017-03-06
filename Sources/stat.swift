@@ -187,7 +187,7 @@
     
     public typealias stat = Glibc.stat
     
-    public typealias stat64 = Glibc.stat64
+//    public typealias stat64 = Glibc.stat64
     
     public var S_BLKSIZE: Int32 {
         return Glibc.S_BLKSIZE
