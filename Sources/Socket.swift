@@ -1311,22 +1311,6 @@
         return Glibc.SO_TIMESTAMP
     }
     
-    public var SO_TIMESTAMP_MONOTONIC: Int32 {
-        return Glibc.SO_TIMESTAMP_MONOTONIC
-    }
-    
-    public var SO_DONTTRUNC: macro_int_t {
-        return Glibc.SO_DONTTRUNC
-    }
-    
-    public var SO_WANTMORE: Int32 {
-        return Glibc.SO_WANTMORE
-    }
-    
-    public var SO_WANTOOBFLAG: Int32 {
-        return Glibc.SO_WANTOOBFLAG
-    }
-    
     public var SO_SNDBUF: Int32 {
         return Glibc.SO_SNDBUF
     }
@@ -1360,135 +1344,151 @@
     }
     
     #if os(FreeBSD)
-    public var SO_LABEL: macro_int_t {
+    public var SO_TIMESTAMP_MONOTONIC: Int32 {
+        return Glibc.SO_TIMESTAMP_MONOTONIC
+    }
+    
+    public var SO_DONTTRUNC: Int32 {
+        return Glibc.SO_DONTTRUNC
+    }
+    
+    public var SO_WANTMORE: Int32 {
+        return Glibc.SO_WANTMORE
+    }
+    
+    public var SO_WANTOOBFLAG: Int32 {
+        return Glibc.SO_WANTOOBFLAG
+    }
+    
+    public var SO_LABEL: Int32 {
         return Glibc.SO_LABEL
     }
     
-    public var SO_PEERLABEL: macro_int_t {
+    public var SO_PEERLABEL: Int32 {
         return Glibc.SO_PEERLABEL
     }
     
-    public var SO_NREAD: macro_int_t {
+    public var SO_NREAD: Int32 {
         return Glibc.SO_NREAD
     }
     
-    public var SO_NKE: macro_int_t {
+    public var SO_NKE: Int32 {
         return Glibc.SO_NKE
     }
     
-    public var SO_NOSIGPIPE: macro_int_t {
+    public var SO_NOSIGPIPE: Int32 {
         return Glibc.SO_NOSIGPIPE
     }
     
-    public var SO_NOADDRERR: macro_int_t {
+    public var SO_NOADDRERR: Int32 {
         return Glibc.SO_NOADDRERR
     }
     
-    public var SO_NWRITE: macro_int_t {
+    public var SO_NWRITE: Int32 {
         return Glibc.SO_NWRITE
     }
     
-    public var SO_REUSESHAREUID: macro_int_t {
+    public var SO_REUSESHAREUID: Int32 {
         return Glibc.SO_REUSESHAREUID
     }
     
-    public var SO_NOTIFYCONFLICT: macro_int_t {
+    public var SO_NOTIFYCONFLICT: Int32 {
         return Glibc.SO_NOTIFYCONFLICT
     }
     
-    public var SO_UPCALLCLOSEWAIT: macro_int_t {
+    public var SO_UPCALLCLOSEWAIT: Int32 {
         return Glibc.SO_UPCALLCLOSEWAIT
     }
     
-    public var SO_LINGER_SEC: macro_int_t {
+    public var SO_LINGER_SEC: Int32 {
         return Glibc.SO_LINGER_SEC
     }
     
-    public var SO_RANDOMPORT: macro_int_t {
+    public var SO_RANDOMPORT: Int32 {
         return Glibc.SO_RANDOMPORT
     }
     
-    public var SO_NP_EXTENSIONS: macro_int_t {
+    public var SO_NP_EXTENSIONS: Int32 {
         return Glibc.SO_NP_EXTENSIONS
     }
     
-    public var SO_NUMRCVPKT: macro_int_t {
+    public var SO_NUMRCVPKT: Int32 {
         return Glibc.SO_NUMRCVPKT
     }
     
-    public var SO_NET_SERVICE_TYPE: macro_int_t {
+    public var SO_NET_SERVICE_TYPE: Int32 {
         return Glibc.SO_NET_SERVICE_TYPE
     }
     
-    public var NET_SERVICE_TYPE_BE: macro_int_t {
+    public var NET_SERVICE_TYPE_BE: Int32 {
         return Glibc.NET_SERVICE_TYPE_BE
     }
     
-    public var NET_SERVICE_TYPE_BK: macro_int_t {
+    public var NET_SERVICE_TYPE_BK: Int32 {
         return Glibc.NET_SERVICE_TYPE_BK
     }
     
-    public var NET_SERVICE_TYPE_SIG: macro_int_t {
+    public var NET_SERVICE_TYPE_SIG: Int32 {
         return Glibc.NET_SERVICE_TYPE_SIG
     }
     
-    public var NET_SERVICE_TYPE_VI: macro_int_t {
+    public var NET_SERVICE_TYPE_VI: Int32 {
         return Glibc.NET_SERVICE_TYPE_VI
     }
     
-    public var NET_SERVICE_TYPE_VO: macro_int_t {
+    public var NET_SERVICE_TYPE_VO: Int32 {
         return Glibc.NET_SERVICE_TYPE_VO
     }
     
-    public var NET_SERVICE_TYPE_RV: macro_int_t {
+    public var NET_SERVICE_TYPE_RV: Int32 {
         return Glibc.NET_SERVICE_TYPE_RV
     }
     
-    public var NET_SERVICE_TYPE_AV: macro_int_t {
+    public var NET_SERVICE_TYPE_AV: Int32 {
         return Glibc.NET_SERVICE_TYPE_AV
     }
     
-    public var NET_SERVICE_TYPE_OAM: macro_int_t {
+    public var NET_SERVICE_TYPE_OAM: Int32 {
         return Glibc.NET_SERVICE_TYPE_OAM
     }
     
-    public var NET_SERVICE_TYPE_RD: macro_int_t {
+    public var NET_SERVICE_TYPE_RD: Int32 {
         return Glibc.NET_SERVICE_TYPE_RD
     }
     
-    public var SO_NETSVC_MARKING_LEVEL: macro_int_t {
+    public var SO_NETSVC_MARKING_LEVEL: Int32 {
         return Glibc.SO_NETSVC_MARKING_LEVEL
     }
     
-    public var NETSVC_MRKNG_UNKNOWN: macro_int_t {
+    public var NETSVC_MRKNG_UNKNOWN: Int32 {
         return Glibc.NETSVC_MRKNG_UNKNOWN
     }
     
-    public var NETSVC_MRKNG_LVL_L2: macro_int_t {
+    public var NETSVC_MRKNG_LVL_L2: Int32 {
         return Glibc.NETSVC_MRKNG_LVL_L2
     }
     
-    public var NETSVC_MRKNG_LVL_L3L2_ALL: macro_int_t {
+    public var NETSVC_MRKNG_LVL_L3L2_ALL: Int32 {
         return Glibc.NETSVC_MRKNG_LVL_L3L2_ALL
     }
     
-    public var NETSVC_MRKNG_LVL_L3L2_BK: macro_int_t {
+    public var NETSVC_MRKNG_LVL_L3L2_BK: Int32 {
         return Glibc.NETSVC_MRKNG_LVL_L3L2_BK
     }
     
-    public var SAE_ASSOCID_ANY: macro_int_t {
+    public var SAE_ASSOCID_ANY: Int32 {
         return Glibc.SAE_ASSOCID_ANY
     }
     
-    public var SAE_CONNID_ANY: macro_int_t {
+    public var SAE_CONNID_ANY: Int32 {
         return Glibc.SAE_CONNID_ANY
     }
     
-    public var CONNECT_RESUME_ON_READ_WRITE: macro_int_t {
+    public var CONNECT_RESUME_ON_READ_WRITE: Int32 {
         return Glibc.CONNECT_RESUME_ON_READ_WRITE
     }
     
-    public var CONNECT_DATA_IDEMPOTENT: macro_int_t {
+    public var CONNECT_DATA_IDEMPOTENT: Int32 {
         return Glibc.CONNECT_DATA_IDEMPOTENT
     }
     #endif
@@ -1544,7 +1544,7 @@
     }
     
     #if os(FreeBSD)
-    public var SONPX_SETOPTSHUT: macro_int_t {
+    public var SONPX_SETOPTSHUT: Int32 {
         return Glibc.SONPX_SETOPTSHUT
     }
 
