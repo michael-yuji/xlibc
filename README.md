@@ -6,4 +6,4 @@ libc module for both Darwin and GNU based system. The main different between Dar
 
 # Contribution
 
-If you found some headers xlibc, Darwin/Glibc missed, please submmit a PR to [_xlibc](https://github.com/projectSX0/_xlibc.git).
+If you found some headers missing in xlibc, Darwin/Glibc, please submmit a PR to [_xlibc](https://github.com/projectSX0/_xlibc.git).
