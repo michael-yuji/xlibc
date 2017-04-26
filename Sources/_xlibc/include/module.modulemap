@@ -1,0 +1,5 @@
+module _xlibc {
+    header "os.h"
+    header "stdc.h"
+    link "_xlibc"
+}
