@@ -17,11 +17,13 @@ typedef struct sockaddr_ll sockaddr_dl;
 
 #ifdef __linux__
 
+#include <sys/file.h>
 #include <sys/epoll.h>
 #include <sys/sendfile.h>
 #include <sys/ioctl.h>
 #include <sys/inotify.h>
 #include <sys/eventfd.h>
-#include <sys/file.h>
+#include <sys/signalfd.h>
+#include <sys/timerfd.h>
 
 #endif
