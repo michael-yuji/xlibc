@@ -1,12 +1,12 @@
+// swift-tools-version:5.1
 import PackageDescription
 
 let package = Package(
     name: "xlibc",
-    targets: [
-        Target(name: "xlibc", dependencies: ["_xlibc"]),
-        Target(name: "_xlibc", dependencies: [])
+		dependencies: [
     ],
-    dependencies: [
-//    .Package(url: "https://github.com/projectSX0/_xlibc.git", majorVersion: 0)
+    targets: [
+        .target(name: "xlibc", dependencies: ["_xlibc"]),
+        .target(name: "_xlibc", dependencies: [])
     ]
 )
