@@ -3,6 +3,9 @@ import PackageDescription
 
 let package = Package(
     name: "xlibc",
+		products: [
+			.library(name: "xlibc", targets: ["xlibc"])
+		],
 		dependencies: [
     ],
     targets: [
